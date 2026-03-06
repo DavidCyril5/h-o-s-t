@@ -1,0 +1,94 @@
+diff --git a/node_modules/react-joyride/es/components/Portal.js b/node_modules/react-joyride/es/components/Portal.js
+index 9934271..1d582a4 100644
+--- a/node_modules/react-joyride/es/components/Portal.js
++++ b/node_modules/react-joyride/es/components/Portal.js
+@@ -1,5 +1,5 @@
+ import React from 'react';
+-import ReactDOM from 'react-dom';
++import { createPortal } from 'react-dom';
+ import PropTypes from 'prop-types';
+ 
+ class Portal extends React.Component {
+@@ -10,29 +10,19 @@
+   }
+ 
+   componentDidMount() {
+-    this.renderOrUpdate();
+-  }
+-
+-  componentDidUpdate() {
+-    this.renderOrUpdate();
++    document.body.appendChild(this.node);
+   }
+ 
+   componentWillUnmount() {
+-    ReactDOM.unmountComponentAtNode(this.node);
+     document.body.removeChild(this.node);
+   }
+ 
+-  renderOrUpdate() {
+-    const { children, zIndex } = this.props;
++  render() {
++    const { children } = this.props;
+ 
+-    this.node.style.zIndex = zIndex;
+-
+-    ReactDOM.unstable_renderSubtreeIntoContainer(
+-      this,
++    return createPortal(
+       <div className="react-joyride__portal">{children}</div>,
+       this.node,
+     );
+   }
+-
+-  render() {
+-    return null;
+-  }
+ }
+ 
+ Portal.propTypes = {
+diff --git a/node_modules/react-joyride/lib/components/Portal.js b/node_modules/react-joyride/lib/components/Portal.js
+index 6a310c1..a489d1b 100644
+--- a/node_modules/react-joyride/lib/components/Portal.js
++++ b/node_modules/react-joyride/lib/components/Portal.js
+@@ -6,7 +6,7 @@
+ exports.default = void 0;
+ 
+ var _react = _interopRequireDefault(require("react"));
+-var _reactDom = _interopRequireDefault(require("react-dom"));
++var _reactDom = require("react-dom");
+ var _propTypes = _interopRequireDefault(require("prop-types"));
+ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+ function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+@@ -32,29 +32,19 @@
+   }
+   componentDidMount() {
+-    this.renderOrUpdate();
+-  }
+-  componentDidUpdate() {
+-    this.renderOrUpdate();
++    document.body.appendChild(this.node);
+   }
+   componentWillUnmount() {
+-    _reactDom.default.unmountComponentAtNode(this.node);
+     document.body.removeChild(this.node);
+   }
+-  renderOrUpdate() {
++  render() {
+     const {
+-      children,
+-      zIndex
++      children
+     } = this.props;
+-    this.node.style.zIndex = zIndex;
+-    _reactDom.default.unstable_renderSubtreeIntoContainer(this, /*#__PURE__*/_react.default.createElement("div", {
++    return (0, _reactDom.createPortal)( /*#__PURE__*/_react.default.createElement("div", {
+       className: "react-joyride__portal"
+     }, children), this.node);
+   }
+-  render() {
+-    return null;
+-  }
+ }
+ exports.default = Portal;
+ _defineProperty(Portal, "propTypes", {

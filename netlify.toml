@@ -1,0 +1,28 @@
+# Netlify configuration file for Next.js projects
+
+# Build settings
+[build]
+  # Command to build your Next.js site
+  command = "npm run build"
+  # Directory (relative to the root of your repo) that Netlify
+  # will publish as the content of your site.
+  # For Next.js, this is typically ".next".
+  publish = ".next"
+
+# The Next.js plugin is essential for deploying Next.js sites on Netlify.
+# It handles features like server-side rendering, API routes, image optimization, etc.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Optional: Environment variables can be set in the Netlify UI,
+# but you can define build-time defaults here if needed.
+# [build.environment]
+#   NEXT_PUBLIC_EXAMPLE_VARIABLE = "example_value"
+
+# Optional: Redirects and rewrites
+# For most Next.js apps, the plugin handles routing correctly.
+# Custom redirects can be added here if needed.
+# [[redirects]]
+#   from = "/old-path"
+#   to = "/new-path"
+#   status = 301
