@@ -51,7 +51,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <Image
-                src="https://camo.githubusercontent.com/f4625823634c4e349a23272ed5d46a3abc569c3676ea3b6ba43c17db1a57e67f/68747470733a2f2f66696c65732e636174626f782e6d6f652f306c793068362e6a7067"
+                src="http://nc-cdn.oss-us-west-1.aliyuncs.com/nekoo/1772795925768.png"
                 alt="Queen Anita V5 Bot"
                 data-ai-hint="chatbot ai"
                 width={600}
