@@ -32,7 +32,7 @@ export default function LandingPage() {
                     Deploy Anita-V5 Bot in Minutes
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                    Anita Deploy simplifies the process of deploying your own Anita-V5 WhatsApp bot.
+                    Anita Deploy simplifies the process of deploying your own Anita WhatsApp bot.
                     Configure your environment, connect to your deployment platform, and go live effortlessly.
                   </p>
                 </div>
@@ -52,7 +52,7 @@ export default function LandingPage() {
               </div>
               <Image
                 src="http://nc-cdn.oss-us-west-1.aliyuncs.com/nekoo/1772795925768.png"
-                alt="Queen Anita V5 Bot"
+                alt="Queen Anita Bot"
                 data-ai-hint="chatbot ai"
                 width={600}
                 height={400}
@@ -81,7 +81,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-2xl font-semibold mb-3 text-foreground">Easy Configuration</h3>
                 <p className="text-sm text-muted-foreground">
-                  Simple form to set up all your Anita-V4 environment variables.
+                  Simple form to set up all your Anita environment variables.
                 </p>
               </div>
               <div className="flex flex-col items-center text-center p-8 rounded-xl border bg-card shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:border-primary/50 transform hover:-translate-y-2">
