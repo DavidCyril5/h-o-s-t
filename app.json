@@ -12,7 +12,7 @@
     },
     "PAYSTACK_SECRET_KEY": {
       "description": "Your Paystack secret key for verifying webhooks.",
-      "value": "sk_live_c10867f07f969175e267f12a34bebe3124f58604"
+      "value": ""
     }
   },
   "scripts": {
